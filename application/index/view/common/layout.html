@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; Charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>那时年少-一个PHP的个人博客网站</title>
+    <link rel="shortcut icon" href="/static/home/images/logo.png" type="image/x-icon">
+    <!--Layui-->
+    <link href="/static/home/plugins/layui/css/layui.css" rel="stylesheet" />
+    <!--font-awesome-->
+    <link href="/static/home/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!--全局样式表-->
+    <link href="/static/home/css/global.css" rel="stylesheet" />
+    <link href="/static/home/css/animate.min.css" rel="stylesheet" />
+    {block name="CSS"}{/block}
+</head>
+<body>
+<!-- 导航 -->
+<nav class="blog-nav layui-header">
+    <div class="blog-container">
+        <!-- 用户登陆 -->
+        <div class="blog-user"></div>
+
+        <!-- nsns -->
+        <a class="blog-logo" href="index.html"><img src="/static/home/images/logo.png" width="64px" height="64px"></a>
+        <!-- 导航菜单 -->
+        <ul class="layui-nav" lay-filter="nav">
+            <li class="layui-nav-item layui-this">
+                <a href="{:url('index/index')}"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="article.html"><i class="fa fa-ra fa-fw"></i>学无止境</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="{:url('index/games')}"><i class="fa fa-paper-plane-o fa-fw"></i>&nbsp;杂七杂八</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="timeline.html"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;点点滴滴</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="about.html"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="website.html"><i class="fa fa-heart-o fa-fw"></i>&nbsp;优秀网站</a>
+            </li>
+        </ul>
+        <!-- 手机和平板的导航开关 -->
+        <a class="blog-navicon" href="javascript:;">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</nav>
+<!-- 主体（一般只改变这里的内容） -->
+<div class="blog-body">
+    {block name="banner"}
+    <div class="layui-container header-banner">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md8">
+                <div class="layui-carousel" id="carousel">
+                    <div carousel-item>
+                        <div><img src="http://news.cnhubei.com/ctjb/ctjbsgk/ctjb40/200808/W020080822221006461534.jpg" alt=""></div>
+                        <div><img src="/static/home//images/bg/b.jpg" alt=""></div>
+                        <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515219103365&di=be6224ae5c08be4f322fcdfcc3a46f4e&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201502%2F21%2F20150221193203_2jLNG.jpeg" alt=""></div>
+                        <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515215946036&di=cc105a1b728bc295d54592314b8f5994&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb7fd5266d0160924cc23fadfde0735fae7cd34eb.jpg" alt=""></div>
+                        <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515215946036&di=cc105a1b728bc295d54592314b8f5994&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb7fd5266d0160924cc23fadfde0735fae7cd34eb.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4" style="background-color: #94674A;">
+                <div class="everyday-sentence">
+                    <img src="/static/home/images/blackborder.jpg" alt="">
+                    <span class="everyday-sentence">
+                            余生不吹温柔风
+                            不饮烈喉酒
+                            不等不归人
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/block}
+    <div class="blog-container">
+        <div class="blog-main">
+
+            {block name="home-tips"}
+            <!-- 网站公告提示 -->
+            {/block}
+
+            {block name="left-content"}
+            <!--左边文章列表-->
+            {/block}
+
+            {block name="right-content"}
+            <!--右边小栏目-->
+            {/block}
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- 底部 -->
+<footer class="blog-footer">
+    <p><span>Copyright</span><span>&copy;</span><span>2017- <?php echo date('Y'); ?></span><a href="http://www.nsnsvip.com">nsns</a><span>Design By 那时年少</span></p>
+    <p><a href="http://www.nsnsvip.com" target="_blank">粤ICP备17160297</a></p>
+</footer>
+
+{block name="sidebar"}
+<!--侧边导航-->
+<ul class="layui-nav layui-nav-tree layui-nav-side blog-nav-left layui-hide" lay-filter="nav">
+    <li class="layui-nav-item layui-this">
+        <a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+    </li>
+    <li class="layui-nav-item">
+        <a href="article.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+    </li>
+    <li class="layui-nav-item">
+        <a href="mixed_pic.html"><i class="fa fa-paper-plane-o fa-fw"></i>&nbsp;杂七杂八</a>
+    </li>
+    <li class="layui-nav-item">
+        <a href="timeline.html"><i class="fa fa-road fa-fw"></i>&nbsp;点点滴滴</a>
+    </li>
+    <li class="layui-nav-item">
+        <a href="about.html"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+    </li>
+</ul>
+
+{/block}
+<!--分享窗体-->
+<div class="blog-share layui-hide">
+    <div class="blog-share-body">
+        <div style="width: 200px;height:100%;">
+            <div class="bdsharebuttonbox">
+                <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                <a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 音乐播放器 -->
+<div id="QPlayer">
+    <ol id="playlist"></ol>
+    <div id="pContent">
+        <div id="player">
+            <span class="cover"></span>
+            <div class="ctrl">
+                <div class="musicTag marquee">
+                    <strong>Title</strong>
+                    <span> - </span>
+                    <span class="artist">Artist</span>
+                </div>
+                <div class="progress">
+                    <div class="timer left">0:00</div>
+                    <div class="contr">
+                        <div class="rewind icon"></div>
+                        <div class="playback icon"></div>
+                        <div class="fastforward icon"></div>
+                    </div>
+                    <div class="right">
+                        <div class="liebiao icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ssBtn">
+            <div class="adf"></div>
+        </div>
+    </div>
+</div>
+
+<!--遮罩-->
+<div class="blog-mask animated layui-hide"></div>
+<!-- layui.js -->
+<script src="/static/home/plugins/layui/layui.js"></script>
+<!-- 全局脚本 -->
+<script src="/static/home/js/global.js"></script>
+<script src="/static/home/js/canvas-particle.js"></script>
+<!-- 本页脚本 -->
+<script src="/static/home/js/index.js"></script>
+<!-- 音乐播放器 -->
+<script src="/static/home/js/jquery.min.js"></script>
+<script src="/static/home/js/jquery.marquee.min.js"></script>
+<script src="/static/home/js/player.js"></script>
+<script src="/static/home/js/scrollReveal.js"></script>
+<script>
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        (function(){
+            window.scrollReveal = new scrollReveal({reset: true});
+        })();
+    };
+</script>
+
+    {block name="JS"}
+    {/block}
+</body>
+</html>

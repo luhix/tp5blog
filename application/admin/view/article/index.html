@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - 桌面</title>
+    <link rel="stylesheet" href="/static/admin/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/admin/lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/admin/css/ns.css">
+</head>
+
+<body style="padding:10px">
+<div class="layui-col-xs12">
+    <blockquote class="layui-elem-quote">
+        文章内容！
+    </blockquote>
+</div>
+<div class="layui-col-xs12">
+    <blockquote class="layui-elem-quote">
+        <a class="layui-btn" href="{:url('article/add')}">添加文章</a>
+        <a class="layui-btn" href="">默认按钮</a>
+        <a class="layui-btn layui-btn-normal" href="">百搭按钮</a>
+        <a class="layui-btn layui-btn-warm" href="">暖色按钮</a>
+        <a class="layui-btn layui-btn-danger" href="">警告按钮</a>
+    </blockquote>
+</div>
+<table id="article" lay-filter="nsns"></table>
+
+
+
+
+<script src="/static/admin/lib/layui/layui.js"></script>
+<script>
+    //配置路径
+    layui.use('table', function(){
+        var table = layui.table;
+
+        //第一个实例
+        table.render({
+            elem: '#article'
+            ,height: 315
+            ,url: '/demo/table/user/' //数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
+                ,{field: 'username', title: '标题', width:80}
+                ,{field: 'sex', title: '性别', width:80, sort: true}
+                ,{field: 'city', title: '城市', width:80}
+                ,{field: 'sign', title: '签名', width: 177}
+                ,{field: 'experience', title: '积分', width: 80, sort: true}
+                ,{field: 'score', title: '评分', width: 80, sort: true}
+                ,{field: 'classify', title: '职业', width: 80}
+                ,{field: 'wealth', title: '财富', width: 135, sort: true}
+            ]]
+        });
+
+    });
+
+</script>
+</body>
+</html>

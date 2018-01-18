@@ -1,0 +1,28 @@
+{extend name="common:layout" /}
+
+{block name="CSS"}
+<!-- 本页样式表 -->
+<link href="/static/home/css/mixed.css" rel="stylesheet" />
+{/block}
+{block name="banner"}
+{/block}
+{block name="home-tips"}
+<blockquote class="layui-elem-quote sitemap layui-breadcrumb shadow">
+    <a href="index.html" title="网站首页">网站首页</a>
+    <a><cite>杂七杂八</cite></a>
+</blockquote>
+{/block}
+
+{block name="left-content"}
+    <div class="child-nav shadow">
+        <span class="child-nav-btn child-nav-btn-this">照片墙</span>
+        <span class="child-nav-btn" onclick="location.href='mixed_vip.html'">VIP视频解析</span>
+        <span class="child-nav-btn" onclick="location.href='mixed_game.html'">游戏墙</span>
+    </div>
+    <div class="mixed-main" id="pic"></div>
+{/block}
+
+{block name="JS"}
+    <!-- 本页脚本 -->
+    <script src="/static/home/js/mixed_pic.js"></script>
+{/block}
